@@ -1,34 +1,25 @@
 # Ender 3 v3 SE
 
-## Things to buy/use regularly
+Relatively cheap printer with some automatics. Requires some enhancements before being considered good enough.
 
-- Adhesive glue.
-- Brass nozzles.
-- Silicone sock.
+## Firmware
 
-## Is auto-leveling applied automatically?
+[Marlin 2.1.x based](https://github.com/navaismo/Marlin_bugfix_2.1_E3V3SE) proved to be the best in terms of features and stability.
 
-Yes if you're on a stock Creality firmware. 
-It happens regardless of auto calibration setting right before print.
+Look closely to different flavors for diffrent motherboards and make sure to use "OctoPrint" version if you control the printer via [Octoprint](https://octoprint.org/) which is highly recommended.
 
-You don't need to add `M420 S1` explicitly in your gcode.
+## Hardware mods
 
-Proof:
+The following proved to work well:
 
-- [Firmware config](https://github.com/CrealityOfficial/Ender-3V3-SE/blob/main/Marlin/Configuration.h#L1522).
-- [Explanation](https://marlinfw.org/docs/gcode/G028.html).
-- Hold Z-axis during first solid layer print. If it's moving then auto-leveling map is applied.
+1. [Add gantry support](https://www.thingiverse.com/thing:6516352)
+2. [Rotate spool adapter 90°](https://www.thingiverse.com/thing:6631744)
+3. [Filament guide](https://www.thingiverse.com/thing:6422862)
+4. [Using Noctua fan + applying its resistor to PSU](https://www.reddit.com/r/Ender3V3SE/comments/1949xsc/creality_ender3_v3_se_fan_upgrade_replace_20mm/). Makes the printer almost silent but that's pricey.
+5. [Official LED light bar](https://store.creality.com/eu/products/ender-3-v3-se-led-light-bar).
+6. Orange silicone spacers for bed leveling. Springs are OK as well but silicone spacers are better.
 
-## Does auto-leveling set Z-offset correctly
-
-Yes, it does. If first layer doesn't stick, use glue.
-
-## Good upgrades
-
-- [Official LED light bar](https://store.creality.com/eu/products/ender-3-v3-se-led-light-bar).
-- Orange silicone spacers for bed leveling. Springs are OK as well but silicone spacers are better.
-
-## How to level the bed using silicone spacers
+### How to level the bed using silicone spacers
 
 1. Install spacers, tighten screws.
 2. Do automatic bed leveling.
@@ -36,14 +27,23 @@ Yes, it does. If first layer doesn't stick, use glue.
 4. Repeat 2-3 until 0.0x in each corner.
 5. Save map to memory.
 
-## Not necessary
+### Useless mods
 
 - Sonic Pad.
 - Nebula.
 - Wifi box.
 
-It's way better to use Orange Pi and install Octoprint / Klipper there.
+It's way better to use Orange Pi or a long USB cable and install Octoprint.
 
-## Good upgrades to print
+## Software
 
-Here's [my collection at printables.com](https://www.printables.com/@samdark_2524499/collections/1863226).
+1. [OrcaSlicer](https://www.orcaslicer.com/).
+2. [Octoprint](https://octoprint.org/) for remote control and printing right from the slicer.
+
+### SD card formatting
+
+SD card should be formatted in FAT, 4096 allocation unit size:
+
+```sh
+mkfs.fat -s 8 /dev/mmcblk0p1
+```
