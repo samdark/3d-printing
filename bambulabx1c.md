@@ -11,6 +11,7 @@ The following proved to work well:
 3. [Ring V4, handle for Bambu build plates](https://makerworld.com/en/models/811097-ring-v4-handle-for-bambu-build-plates-256x256)
 4. [Fully Printed 4Way-Splitter](https://makerworld.com/en/models/1256365-fully-printed-4way-splitter)
 5. [The Shifty - Build Plate Guide](https://makerworld.com/en/models/83480-the-shifty-build-plate-guide)
+6. [AMS Feeder Funnel Saver Protector Filament Guide](https://makerworld.com/en/models/40194-ams-feeder-funnel-saver-protector-filament-guide)
 
 ## LAN only mode
 
