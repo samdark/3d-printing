@@ -13,6 +13,8 @@ The following proved to work well:
 5. [The Shifty - Build Plate Guide](https://makerworld.com/en/models/83480-the-shifty-build-plate-guide)
 6. [AMS Feeder Funnel Saver Protector Filament Guide](https://makerworld.com/en/models/40194-ams-feeder-funnel-saver-protector-filament-guide)
 
+See also official [list of mods to avoid](https://wiki.bambulab.com/en/general/bambu-mods-to-avoid).
+
 ## LAN only mode
 
 The printer can work in LAN without the need to access Internet. It could be turned on in settings.
